@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-image: url(rasm/Background-img.jpg)
+}
+.tasbex{
+    width:150px;
+    height:170px;
+    border-radius:20%;
+    background-color: blue;
+    margin:0 auto;
+   position:relative;
+   margin-top:100px;
+}
+.tasbex:hover{
+    background-color: aqua;
+}
+.window{
+    position: absolute;
+    top:26px;
+    left:25px;
+    width:94px;
+    height:29px;
+    caret-color: white;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 15%;
+}
+.btn{
+    position: absolute;
+    top: 103px;
+    left: 56px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+}
+.btn2{
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+}
+    </style>
+</head>
+<body>
+    <div class="tasbex">
+        <input type="text" value="0" class="window">
+        <button class="btn"></button>
+        <button class="btn2"></button>
+    </div>
+    <script>
+        document.querySelector('.btn').addEventListener('click',function(){
+            var window = document.querySelector('.window');
+             window.value = parseInt(window.value)+1;
+        });
+        document.querySelector('.btn2').addEventListener('click',function(){
+            document.querySelector('.window').value = 0;
+        });
+    </script>
+</body>
+</html>
